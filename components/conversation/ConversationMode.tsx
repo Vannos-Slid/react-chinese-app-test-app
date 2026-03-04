@@ -346,7 +346,7 @@ export default function ConversationMode({
             <ThemedText
               style={{ fontSize: 12, color: Colors.subduedTextColor }}
             >
-              Goal {scenario.goal}
+              Goal: {scenario.goal}
             </ThemedText>
           </View>
           <View style={{ flexDirection: "row", gap: 16, alignItems: "center" }}>

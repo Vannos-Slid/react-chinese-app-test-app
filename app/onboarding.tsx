@@ -359,7 +359,7 @@ export default function OnboardingScreen() {
 
       <Paywall
         visible={showPaywall}
-        onClose={() => router.replace("/explore")}
+        onClose={() => router.replace("/lessons")}
       />
     </SafeAreaView>
   );

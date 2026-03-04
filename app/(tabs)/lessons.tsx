@@ -18,7 +18,7 @@ export default function LessonsContent() {
   const [progress, setProgress] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    loadProgress();
+    void loadProgress();
   }, []);
 
   const loadProgress = async () => {
