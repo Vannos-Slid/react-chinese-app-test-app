@@ -154,7 +154,14 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "meta-llama/llama-3.3-70b-instruct:free",
+          // model: "meta-llama/llama-3.3-70b-instruct:free",
+          models: [
+            "google/gemma-4-31b-it:free",
+            "meta-llama/llama-3.3-70b-instruct:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+          ],
+          //route is additional variant to "models"
+          route: "fallback",
           messages: conversation,
           response_format: { type: "json_object" },
         }),
