@@ -54,7 +54,7 @@ export default function IntroScreen() {
     EBGaramond_500Medium_Italic,
   });
 
-  const mainTextWords: string[] = ["Learn", "Mandarin", "the", "right", "way"];
+  const mainTextWords: string[] = ["Learn", "Japanese", "the", "right", "way"];
   const scriptPhrases: string[] = [
     "Speaking",
     "Listening",

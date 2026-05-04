@@ -227,7 +227,7 @@ export default function LessonContent({
 
     setIsSpeechPlaying(true);
     Speech.speak(textToSpeak, {
-      language: "zh-CN",
+      language: "ja-JP",
       onDone: () => {
         setIsSpeechPlaying(false);
         finishListening();

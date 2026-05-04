@@ -82,7 +82,7 @@ export default function ConversationMode({
 
   const handlePlayAudio = (text: string) => {
     Speech.stop();
-    Speech.speak(text, { language: "zh-CN" });
+    Speech.speak(text, { language: "ja-JP" });
   };
 
   const callChatCompletion = async (params: {
