@@ -54,9 +54,9 @@ export default function ConversationMode({
     {
       id: "1",
       role: "assistant",
-      text: "你好！",
-      hanzi: "你好！",
-      pinyin: "Nǐ hǎo!",
+      text: "こんにちは！",
+      hanzi: "こんにちは！",
+      pinyin: "Konnichiwa!",
       english: "Hello!",
     },
   ]);

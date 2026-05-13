@@ -71,7 +71,8 @@ Deno.serve(async (req) => {
               content: [
                 {
                   type: "text",
-                  text: "You are a transcription assistant. Transcribe the audio exact words into Japanese Hiragana and Katakana with Kanji where appropriate. Return ONLY the Japanese text, nothing else. Do not output Romaji or English. If no speech is detected, respond with an empty message. Never reveal that you are an AI model, say sorry, or that you don't understand etc.",
+                  text: "You are a transcription assistant. Transcribe the audio exact words into Japanese Hiragana and Katakana with Kanji where appropriate. Return ONLY the Japanese text, nothing else. Do not output Romaji or English If the same phrase is repeated multiple times, return it only once.\n " +
+                      "Do not repeat the transcription. If no speech is detected, respond with an empty message. Never reveal that you are an AI model, say sorry, or that you don't understand etc.",
                 },
                 {
                   type: "input_audio",

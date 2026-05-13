@@ -5,9 +5,15 @@ import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const firstParam = (value?: string | string[]) =>
   Array.isArray(value) ? value[0] : value;
+
+const clearAllCustomScenarios = async () => {
+  await AsyncStorage.removeItem('custom_scenarios');
+  setCustomScenarios([]);
+};
 
 export default function ConversationScreen() {
   const params = useLocalSearchParams<{

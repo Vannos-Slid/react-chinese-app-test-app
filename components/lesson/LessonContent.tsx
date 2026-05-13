@@ -24,6 +24,7 @@ import MultipleChoiceMode from "./MultipleChoiceMode";
 import ProgressHeader from "./ProgressHeader";
 import SentenceBreakdownCard from "./SentenceBreakdownCard";
 import SingleResponseMode from "./SingleResponseMode";
+import * as wanakana from 'wanakana';
 
 interface WrongQuestion {
   english: string;
@@ -298,18 +299,37 @@ export default function LessonContent({
 
     const punctuationRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()?]/g;
 
+    //Original
+    // const rawExpected = selectedSentence?.mandarin.pinyin || "";
+
+
     const rawExpected = selectedSentence?.mandarin.pinyin || "";
-    const expected = rawExpected
-      .toLowerCase()
-      .replace(punctuationRegex, "")
-      .replace(/\s+/g, "")
-      .trim();
+    const expectedInKana = wanakana.toHiragana(rawExpected);
+    const expected = expectedInKana
+        .toLowerCase()
+        .replace(punctuationRegex, "")
+        .replace(/\s+/g, "")
+        .trim();
 
     const said = transcript
-      .toLowerCase()
-      .replace(punctuationRegex, "")
-      .replace(/\s+/g, "")
-      .trim();
+        .toLowerCase()
+        .replace(punctuationRegex, "")
+        .replace(/\s+/g, "")
+        .trim();
+
+
+    //  const rawExpected = selectedSentence?.mandarin.hanzi || selectedSentence?.mandarin.pinyin || "";
+    // const expected = rawExpected
+    //   .toLowerCase()
+    //   .replace(punctuationRegex, "")
+    //   .replace(/\s+/g, "")
+    //   .trim();
+    //
+    // const said = transcript
+    //   .toLowerCase()
+    //   .replace(punctuationRegex, "")
+    //   .replace(/\s+/g, "")
+    //   .trim();
 
     setTranscription({ expected: rawExpected, said: transcript });
 
