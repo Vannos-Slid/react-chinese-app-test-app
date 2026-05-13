@@ -63,14 +63,15 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+          model: "google/gemini-3-flash-preview",
+          // model: "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
           messages: [
             {
               role: "user",
               content: [
                 {
                   type: "text",
-                  text: "You are a transcription assistant. Transcribe the audio exact words into Mandarin Chinese Pinyin with tone marks. Return ONLY the Pinyin text, nothing else. Do not output Hanzi or English. If no speech is detected, respond with an empty message. Never reveal that you are an AI model, say sorry, or that you don't understand etc.",
+                  text: "You are a transcription assistant. Transcribe the audio exact words into Japanese Hiragana and Katakana with Kanji where appropriate. Return ONLY the Japanese text, nothing else. Do not output Romaji or English. If no speech is detected, respond with an empty message. Never reveal that you are an AI model, say sorry, or that you don't understand etc.",
                 },
                 {
                   type: "input_audio",

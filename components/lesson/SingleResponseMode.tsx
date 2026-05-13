@@ -39,7 +39,7 @@ export default function SingleResponseMode({
           ]}
         >
           <ThemedText style={styles.sayItPrompt}>
-            Record this response in Mandarin
+            Record this response in Japanese
           </ThemedText>
         </Animated.View>
       </View>

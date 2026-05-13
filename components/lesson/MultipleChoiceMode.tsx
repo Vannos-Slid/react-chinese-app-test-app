@@ -66,7 +66,7 @@ export default function MultipleChoiceMode({
           ]}
         >
           <ThemedText type="subtitle" style={styles.sayItPrompt}>
-            Now, say it in Mandarin
+            Now, say it in Japanise
           </ThemedText>
         </Animated.View>
       </View>

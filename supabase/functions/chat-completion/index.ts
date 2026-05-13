@@ -154,6 +154,7 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          model: "google/gemini-3-flash-preview",
           // model: "meta-llama/llama-3.3-70b-instruct:free",
           models: [
             "google/gemma-4-31b-it:free",
